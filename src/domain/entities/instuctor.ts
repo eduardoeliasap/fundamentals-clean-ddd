@@ -1,15 +1,14 @@
-import { randomUUID } from "node:crypto"
+import { Entity } from "../../core/entities/entity"
 
 interface InstructiorProps {
     name: string
 }
 
-export class Instructior {
-    public id: string
-    public name: string
-
-    constructor(props: InstructiorProps, id?: string) {
-        this.name = props.name
-        this.id = id ?? randomUUID()
+export class Instructior extends Entity<InstructiorProps> {
+    /**
+     * This is an example of Accessor
+     */
+    get name() {
+        return this.props.name
     }
 }
