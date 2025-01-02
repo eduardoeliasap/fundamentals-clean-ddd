@@ -1,5 +1,5 @@
 import { EditQuestionUseCase } from './edit-question'
-import { InMemoryQuestionsRepository } from '../../../../../test/repositories/in-memory-question-repository'
+import { InMemoryQuestionsRepository } from 'test/repositories/in-memory-question-repository'
 import { makeQuestion } from 'test/factories/make-question'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 
