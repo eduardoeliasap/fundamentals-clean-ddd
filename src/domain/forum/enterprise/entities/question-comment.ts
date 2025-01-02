@@ -11,6 +11,12 @@ export interface QuestionCommentProps {
 }
 
 export class QuestionComment extends Entity<QuestionCommentProps> {
+  // questionId: UniqueEntityID
+
+  get questionId() {
+    return this.props.questionId
+  }
+
   get authorId() {
     return this.props.authorId
   }
