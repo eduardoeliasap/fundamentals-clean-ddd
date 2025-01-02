@@ -7,17 +7,16 @@ import {
 
 export function makeQuestion(
   override: Partial<QuestionProps> = {},
-  authorId?: UniqueEntityID,
-  questionId?: UniqueEntityID,
+  id?: UniqueEntityID,
 ) {
   const question = Question.create(
     {
-      authorId: authorId ?? new UniqueEntityID(),
+      authorId: new UniqueEntityID(),
       title: faker.lorem.sentence(),
       content: faker.lorem.text(),
       ...override,
     },
-    questionId ?? new UniqueEntityID(),
+    id ?? new UniqueEntityID(),
   )
 
   return question

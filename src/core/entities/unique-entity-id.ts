@@ -7,13 +7,13 @@ export class UniqueEntityID {
     return this._id
   }
 
-  // toString() {
-  //     return this._id
-  // }
+  toString() {
+    return this._id
+  }
 
-  // toValue() {
-  //     return this._id
-  // }
+  toValue() {
+    return this._id
+  }
 
   constructor(id?: string) {
     this._id = id ?? randomUUID()
